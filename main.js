@@ -24,3 +24,54 @@ var wordCount = function(string){
 var string = "This is a string";
 
 wordCount(string);
+
+// -----------Prime Number--------------
+
+// C code from application
+#include <stdio.h>
+#include <math.h>
+
+main(void)
+{
+
+    OptimusPrime(); //Run function "OptimusPrime
+
+    return 0;
+}
+OptimusPrime() //OptimusPrime function
+{
+    int X = 0; //declare local variables
+    int i=0;
+    float y=0;
+
+    printf("Enter an integer: "); //Request user input
+    scanf("%d", &X);
+
+     if(X==2)  //Unique conditions
+        {
+            printf("\nThe number is prime\n");
+        }
+    if(X<2)
+        {
+            printf("\nA prime number must be greater than one.\n");
+        }
+
+    for(i=2; i<X ; i++) //Determine if number is prime and print result
+    {
+
+        y=X%i;
+
+        if(y==0)
+        {
+
+            printf("\nThe number is not prime\n");
+            break;
+        }
+    }
+
+    if(y!=0)
+    {
+        printf("\nThe number is prime\n");
+    }
+
+}
